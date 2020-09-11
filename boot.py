@@ -12,7 +12,7 @@ def do_connect():
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
-        sta_if.connect('EGATWIFI', '')
+        sta_if.connect('WIFIname', '')	# put SSID here #
         while not sta_if.isconnected():
             pass
     print('network config:', sta_if.ifconfig())
@@ -21,3 +21,4 @@ import webrepl
 webrepl.start()
 gc.collect()
 
+## need to manual setup webrepl by using import webrepl_setup then follow the instruction ##
